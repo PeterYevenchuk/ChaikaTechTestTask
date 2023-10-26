@@ -33,3 +33,5 @@ D:\GitHubRepo\ChaikaTechTestTask\ChaikaTechTestTask.Core\obj\Debug\net7.0\refint
 D:\GitHubRepo\ChaikaTechTestTask\ChaikaTechTestTask.Core\obj\Debug\net7.0\ChaikaTechTestTask.Core.pdb
 D:\GitHubRepo\ChaikaTechTestTask\ChaikaTechTestTask.Core\obj\Debug\net7.0\ChaikaTechTestTask.Core.genruntimeconfig.cache
 D:\GitHubRepo\ChaikaTechTestTask\ChaikaTechTestTask.Core\obj\Debug\net7.0\ref\ChaikaTechTestTask.Core.dll
+D:\GitHubRepo\ChaikaTechTestTask\ChaikaTechTestTask.Core\bin\Debug\net7.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\GitHubRepo\ChaikaTechTestTask\ChaikaTechTestTask.Core\bin\Debug\net7.0\Microsoft.Extensions.Hosting.Abstractions.dll

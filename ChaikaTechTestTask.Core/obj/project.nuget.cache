@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "a8L1jr/nUZ+GtiuIAVo5vLbC3y2oTPAiWhL++3wq5Cmoe5dP9ydC+dU2EDok29w84XasXISOxhxb7rSCgJGimw==",
+  "dgSpecHash": "qSRnZOzbDVRjQliKbuMFyG0NIcGid1IS20brTInj/2igE8GDibpHshIXCpKHilEuPjoQYnsdnbwXeTGDjLfxCA==",
   "success": true,
   "projectFilePath": "D:\\GitHubRepo\\ChaikaTechTestTask\\ChaikaTechTestTask.Core\\ChaikaTechTestTask.Core.csproj",
   "expectedPackageFiles": [
@@ -17,6 +17,8 @@
     "C:\\Users\\petro\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
     "C:\\Users\\petro\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\petro\\.nuget\\packages\\microsoft.extensions.dependencymodel\\7.0.0\\microsoft.extensions.dependencymodel.7.0.0.nupkg.sha512",
+    "C:\\Users\\petro\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\7.0.0\\microsoft.extensions.fileproviders.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\petro\\.nuget\\packages\\microsoft.extensions.hosting.abstractions\\7.0.0\\microsoft.extensions.hosting.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\petro\\.nuget\\packages\\microsoft.extensions.logging\\7.0.0\\microsoft.extensions.logging.7.0.0.nupkg.sha512",
     "C:\\Users\\petro\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\petro\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\microsoft.extensions.options.7.0.0.nupkg.sha512",
