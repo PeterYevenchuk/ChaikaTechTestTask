@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "qSRnZOzbDVRjQliKbuMFyG0NIcGid1IS20brTInj/2igE8GDibpHshIXCpKHilEuPjoQYnsdnbwXeTGDjLfxCA==",
+  "dgSpecHash": "nClNJ8YwOYkvbxBlxDlV2dEXwmhyIM3T77LWud5epe/v7dPjXsYd/73H5p02UpkD1N/gamDakNszT5azKK0hZw==",
   "success": true,
   "projectFilePath": "D:\\GitHubRepo\\ChaikaTechTestTask\\ChaikaTechTestTask.Core\\ChaikaTechTestTask.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\petro\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\petro\\.nuget\\packages\\mediatr\\12.1.1\\mediatr.12.1.1.nupkg.sha512",
+    "C:\\Users\\petro\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\petro\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.13\\microsoft.entityframeworkcore.7.0.13.nupkg.sha512",
     "C:\\Users\\petro\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.13\\microsoft.entityframeworkcore.abstractions.7.0.13.nupkg.sha512",
     "C:\\Users\\petro\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.13\\microsoft.entityframeworkcore.analyzers.7.0.13.nupkg.sha512",

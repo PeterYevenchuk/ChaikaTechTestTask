@@ -35,3 +35,5 @@ D:\GitHubRepo\ChaikaTechTestTask\ChaikaTechTestTask.Core\obj\Debug\net7.0\Chaika
 D:\GitHubRepo\ChaikaTechTestTask\ChaikaTechTestTask.Core\obj\Debug\net7.0\ref\ChaikaTechTestTask.Core.dll
 D:\GitHubRepo\ChaikaTechTestTask\ChaikaTechTestTask.Core\bin\Debug\net7.0\Microsoft.Extensions.FileProviders.Abstractions.dll
 D:\GitHubRepo\ChaikaTechTestTask\ChaikaTechTestTask.Core\bin\Debug\net7.0\Microsoft.Extensions.Hosting.Abstractions.dll
+D:\GitHubRepo\ChaikaTechTestTask\ChaikaTechTestTask.Core\bin\Debug\net7.0\MediatR.dll
+D:\GitHubRepo\ChaikaTechTestTask\ChaikaTechTestTask.Core\bin\Debug\net7.0\MediatR.Contracts.dll
