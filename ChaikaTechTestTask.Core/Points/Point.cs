@@ -18,7 +18,7 @@ public class Point
 
     public double TotalPoints { get; set; }
 
-    public DateTime TodayDate { get; set; }
+    public DateOnly TodayDate { get; set; }
 
     public int UserId { get; set; }
 

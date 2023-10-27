@@ -7,6 +7,8 @@ public class CoreMappingsProfile : Profile
 {
     public CoreMappingsProfile()
     {
-        CreateMap<LatestTransaction, LatestTransactionViewModel>();
+        CreateMap<LatestTransaction, LatestTransactionViewModel>()
+            .ForMember(dest => dest.TransactionDate, opt => opt.Ignore())
+            .ForMember(dest => dest.Amount, opt => opt.Ignore());
     }
 }

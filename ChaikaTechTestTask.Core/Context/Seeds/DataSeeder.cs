@@ -15,8 +15,8 @@ public static class DataSeeder
         );
 
         modelBuilder.Entity<Point>().HasData(
-            new Point { PointId = 1, BeforeYesterdayPoints = 100, YesterdayPoints = 50, TotalPoints = 150, TodayPoints = 0, UserId = 1, TodayDate = new DateTime(2023, 10, 26, 5, 24, 0, DateTimeKind.Utc) },
-            new Point { PointId = 2, BeforeYesterdayPoints = 200, YesterdayPoints = 100, TotalPoints = 300, TodayPoints = 0, UserId = 2, TodayDate = new DateTime(2023, 10, 25, 9,50, 0, DateTimeKind.Utc) }
+            new Point { PointId = 1, BeforeYesterdayPoints = 1000, YesterdayPoints = 3060, TotalPoints = 150, TodayPoints = 5005, UserId = 1, TodayDate = new DateOnly(2023, 10, 26) },
+            new Point { PointId = 2, BeforeYesterdayPoints = 200, YesterdayPoints = 100, TotalPoints = 200, TodayPoints = 360, UserId = 2, TodayDate = new DateOnly(2023, 10, 25) }
         );
 
         modelBuilder.Entity<LatestTransaction>().HasData(
@@ -31,7 +31,7 @@ public static class DataSeeder
                 TransactionDate = new DateOnly(2023, 10, 26),
                 TransactionTime = new TimeOnly(8, 30),
                 IsPending = false,
-                IconURL = "paymentsuccessful",
+                IconURL = "image/paymentsuccessful.png",
                 UserId = 1
             },
             new LatestTransaction
@@ -42,10 +42,10 @@ public static class DataSeeder
                 Balance = 70,
                 TransactionName = "Sumsung",
                 Description = "New phone",
-                TransactionDate = new DateOnly(2023, 10, 26),
+                TransactionDate = new DateOnly(2023, 10, 25),
                 TransactionTime = new TimeOnly(9, 30),
                 IsPending = false,
-                IconURL = "paymentsuccessful",
+                IconURL = "image/paymentsuccessful.png",
                 UserId = 2
             },
             new LatestTransaction
@@ -56,11 +56,11 @@ public static class DataSeeder
                 Balance = 570,
                 TransactionName = "Payment",
                 Description = "Good job",
-                TransactionDate = new DateOnly(2023, 10, 26),
+                TransactionDate = new DateOnly(2023, 10, 27),
                 TransactionTime = new TimeOnly(10, 30),
                 IsPending = true,
                 AuthorizedUser = "Boss",
-                IconURL = "aa75349fa565c0e2792a888478408204",
+                IconURL = "image/aa75349fa565c0e2792a888478408204.png",
                 UserId = 2
             },
             new LatestTransaction
@@ -71,10 +71,10 @@ public static class DataSeeder
                 Balance = 540,
                 TransactionName = "Headphones",
                 Description = "New headphones",
-                TransactionDate = new DateOnly(2023, 10, 26),
+                TransactionDate = new DateOnly(2023, 10, 24),
                 TransactionTime = new TimeOnly(11, 30),
                 IsPending = false,
-                IconURL = "paymentsuccessful",
+                IconURL = "image/paymentsuccessful.png",
                 UserId = 1
             },
             new LatestTransaction
@@ -85,10 +85,10 @@ public static class DataSeeder
                 Balance = 50,
                 TransactionName = "Laptop",
                 Description = "Laptop purchase",
-                TransactionDate = new DateOnly(2023, 10, 26),
+                TransactionDate = new DateOnly(2023, 10, 18),
                 TransactionTime = new TimeOnly(12, 30),
                 IsPending = false,
-                IconURL = "paymentsuccessful",
+                IconURL = "image/paymentsuccessful.png",
                 UserId = 1
             },
             new LatestTransaction
@@ -99,11 +99,11 @@ public static class DataSeeder
                 Balance = 570,
                 TransactionName = "Rent",
                 Description = "Monthly rent payment",
-                TransactionDate = new DateOnly(2023, 10, 26),
+                TransactionDate = new DateOnly(2023, 10, 5),
                 TransactionTime = new TimeOnly(13, 30),
                 IsPending = true,
                 AuthorizedUser = "Landlord",
-                IconURL = "aa75349fa565c0e2792a888478408204",
+                IconURL = "image/aa75349fa565c0e2792a888478408204.png",
                 UserId = 1
             },
             new LatestTransaction
@@ -114,10 +114,10 @@ public static class DataSeeder
                 Balance = 35,
                 TransactionName = "Groceries",
                 Description = "Grocery shopping",
-                TransactionDate = new DateOnly(2023, 10, 26),
+                TransactionDate = new DateOnly(2023, 10, 1),
                 TransactionTime = new TimeOnly(14, 30),
                 IsPending = false,
-                IconURL = "paymentsuccessful",
+                IconURL = "image/paymentsuccessful.png",
                 UserId = 2
             },
             new LatestTransaction
@@ -128,10 +128,10 @@ public static class DataSeeder
                 Balance = 10,
                 TransactionName = "Restaurant",
                 Description = "Dinner at a restaurant",
-                TransactionDate = new DateOnly(2023, 10, 26),
+                TransactionDate = new DateOnly(2023, 10, 22),
                 TransactionTime = new TimeOnly(15, 30),
                 IsPending = false,
-                IconURL = "paymentsuccessful",
+                IconURL = "image/paymentsuccessful.png",
                 UserId = 2
             },
             new LatestTransaction
@@ -142,11 +142,11 @@ public static class DataSeeder
                 Balance = 225,
                 TransactionName = "Internet",
                 Description = "Monthly internet bill",
-                TransactionDate = new DateOnly(2023, 10, 26),
+                TransactionDate = new DateOnly(2023, 10, 21),
                 TransactionTime = new TimeOnly(16, 30),
                 IsPending = true,
                 AuthorizedUser = "Internet Provider",
-                IconURL = "aa75349fa565c0e2792a888478408204",
+                IconURL = "image/aa75349fa565c0e2792a888478408204.png",
                 UserId = 2
             },
             new LatestTransaction
@@ -157,11 +157,11 @@ public static class DataSeeder
                 Balance = 75,
                 TransactionName = "Electricity Bill",
                 Description = "Monthly electricity bill payment",
-                TransactionDate = new DateOnly(2023, 10, 26),
+                TransactionDate = new DateOnly(2023, 10, 21),
                 TransactionTime = new TimeOnly(17, 30),
                 IsPending = true,
                 AuthorizedUser = "Electricity Company",
-                IconURL = "aa75349fa565c0e2792a888478408204",
+                IconURL = "image/aa75349fa565c0e2792a888478408204.png",
                 UserId = 1
             },
             new LatestTransaction
@@ -172,10 +172,10 @@ public static class DataSeeder
                 Balance = 35,
                 TransactionName = "Books",
                 Description = "Purchase of books",
-                TransactionDate = new DateOnly(2023, 10, 26),
+                TransactionDate = new DateOnly(2023, 10, 24),
                 TransactionTime = new TimeOnly(18, 30),
                 IsPending = false,
-                IconURL = "paymentsuccessful",
+                IconURL = "image/paymentsuccessful.png",
                 UserId = 1
             },
             new LatestTransaction
@@ -189,7 +189,7 @@ public static class DataSeeder
                 TransactionDate = new DateOnly(2023, 10, 26),
                 TransactionTime = new TimeOnly(19, 30),
                 IsPending = false,
-                IconURL = "paymentsuccessful",
+                IconURL = "image/paymentsuccessful.png",
                 UserId = 2
             },
             new LatestTransaction
@@ -204,7 +204,123 @@ public static class DataSeeder
                 TransactionTime = new TimeOnly(20, 30),
                 IsPending = true,
                 AuthorizedUser = "Hospital",
-                IconURL = "aa75349fa565c0e2792a888478408204",
+                IconURL = "image/aa75349fa565c0e2792a888478408204.png",
+                UserId = 2
+            },
+           new LatestTransaction
+           {
+               TransactionId = 14,
+               Transaction = TransactionType.Payment,
+               Amount = 50,
+               Balance = 50,
+               TransactionName = "Rent",
+               Description = "Monthly rent payment",
+               TransactionDate = new DateOnly(2023, 10, 5),
+               TransactionTime = new TimeOnly(13, 30),
+               IsPending = true,
+               AuthorizedUser = "Landlord",
+               IconURL = "image/aa75349fa565c0e2792a888478408204.png",
+               UserId = 1
+           },
+            new LatestTransaction
+            {
+                TransactionId = 15,
+                Transaction = TransactionType.Credit,
+                Amount = 15,
+                Balance = 35,
+                TransactionName = "Groceries",
+                Description = "Grocery shopping",
+                TransactionDate = new DateOnly(2023, 10, 1),
+                TransactionTime = new TimeOnly(14, 30),
+                IsPending = false,
+                IconURL = "image/paymentsuccessful.png",
+                UserId = 1
+            },
+            new LatestTransaction
+            {
+                TransactionId = 16,
+                Transaction = TransactionType.Credit,
+                Amount = 25,
+                Balance = 10,
+                TransactionName = "Restaurant",
+                Description = "Dinner at a restaurant",
+                TransactionDate = new DateOnly(2023, 10, 22),
+                TransactionTime = new TimeOnly(15, 30),
+                IsPending = false,
+                IconURL = "image/paymentsuccessful.png",
+                UserId = 2
+            },
+            new LatestTransaction
+            {
+                TransactionId = 17,
+                Transaction = TransactionType.Payment,
+                Amount = 200,
+                Balance = 225,
+                TransactionName = "Internet",
+                Description = "Monthly internet bill",
+                TransactionDate = new DateOnly(2023, 10, 21),
+                TransactionTime = new TimeOnly(16, 30),
+                IsPending = true,
+                AuthorizedUser = "Internet Provider",
+                IconURL = "image/aa75349fa565c0e2792a888478408204.png",
+                UserId = 1
+            },
+            new LatestTransaction
+            {
+                TransactionId = 18,
+                Transaction = TransactionType.Payment,
+                Amount = 150,
+                Balance = 75,
+                TransactionName = "Electricity Bill",
+                Description = "Monthly electricity bill payment",
+                TransactionDate = new DateOnly(2023, 10, 21),
+                TransactionTime = new TimeOnly(17, 30),
+                IsPending = true,
+                AuthorizedUser = "Electricity Company",
+                IconURL = "image/aa75349fa565c0e2792a888478408204.png",
+                UserId = 2
+            },
+            new LatestTransaction
+            {
+                TransactionId = 19,
+                Transaction = TransactionType.Credit,
+                Amount = 40,
+                Balance = 35,
+                TransactionName = "Books",
+                Description = "Purchase of books",
+                TransactionDate = new DateOnly(2023, 10, 24),
+                TransactionTime = new TimeOnly(18, 30),
+                IsPending = false,
+                IconURL = "image/paymentsuccessful.png",
+                UserId = 1
+            },
+            new LatestTransaction
+            {
+                TransactionId = 20,
+                Transaction = TransactionType.Credit,
+                Amount = 60,
+                Balance = 20,
+                TransactionName = "Gaming Console",
+                Description = "Purchase of a gaming console",
+                TransactionDate = new DateOnly(2023, 10, 26),
+                TransactionTime = new TimeOnly(19, 30),
+                IsPending = false,
+                IconURL = "image/paymentsuccessful.png",
+                UserId = 1
+            },
+            new LatestTransaction
+            {
+                TransactionId = 21,
+                Transaction = TransactionType.Payment,
+                Amount = 75,
+                Balance = 150,
+                TransactionName = "Medical Bill",
+                Description = "Payment of medical bills",
+                TransactionDate = new DateOnly(2023, 10, 26),
+                TransactionTime = new TimeOnly(20, 30),
+                IsPending = true,
+                AuthorizedUser = "Hospital",
+                IconURL = "image/aa75349fa565c0e2792a888478408204.png",
                 UserId = 2
             }
         );

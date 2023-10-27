@@ -2,13 +2,13 @@
 
 public class GetMainInfo
 {
-    public decimal CardBalance { get; set; }
+    public string CardBalance { get; set; }
 
-    public decimal AvailableBalance { get; set; }
+    public string AvailableBalance { get; set; }
 
     public string PaymentDue {  get; set; }
 
-    public int DailyPoints { get; set; }
+    public string DailyPoints { get; set; }
 
     public List<LatestTransactionViewModel> Transactions { get; set; }
 }

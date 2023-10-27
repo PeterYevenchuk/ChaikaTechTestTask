@@ -6,7 +6,7 @@ public class LatestTransactionViewModel
 
     public string Transaction { get; set; }
 
-    public decimal Amount { get; set; }
+    public string Amount { get; set; }
 
     public string TransactionName { get; set; }
 

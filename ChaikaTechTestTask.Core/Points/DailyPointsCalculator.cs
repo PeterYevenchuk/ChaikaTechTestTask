@@ -39,12 +39,15 @@ public class DailyPointsCalculator
             throw new ArgumentException("User not found!!");
         }
 
-        var points = await DetermineSeason(DateTime.Now, userId);
+        DateTime currentDateAndTime = DateTime.Now;
+        DateOnly currentDate = DateOnly.FromDateTime(currentDateAndTime);
+
+        var points = await DetermineSeason(currentDate, userId);
 
         return points;
     }
 
-    private async Task<double> DetermineSeason(DateTime currentDate, int userId)
+    private async Task<double> DetermineSeason(DateOnly currentDate, int userId)
     {
         var points = await _context.Points.FirstOrDefaultAsync(u => u.UserId == userId);
         if (points == null)
@@ -63,8 +66,8 @@ public class DailyPointsCalculator
                 points.BeforeYesterdayPoints = points.YesterdayPoints;
                 points.YesterdayPoints = points.TodayPoints;
                 points.TodayPoints = POINTS_FIRST_DAY_MONTH;
-                points.TotalPoints = points.TotalPoints + POINTS_FIRST_DAY_MONTH; // ???
                 points.TodayDate = currentDate;
+                points.TotalPoints += POINTS_FIRST_DAY_MONTH; // ???
             }
         }
         else if ((month == SPRING && day == SECOND_DAY) || (month == SUMMER && day == SECOND_DAY) ||
@@ -75,19 +78,19 @@ public class DailyPointsCalculator
                 points.BeforeYesterdayPoints = points.YesterdayPoints;
                 points.YesterdayPoints = points.TodayPoints;
                 points.TodayPoints = POINTS_SECOND_DAY_MONTH;
-                points.TotalPoints = points.TotalPoints + POINTS_SECOND_DAY_MONTH; // ???
                 points.TodayDate = currentDate;
+                points.TotalPoints += POINTS_SECOND_DAY_MONTH; // ???
             }
         }
         else
         {
             if (points.TodayDate < currentDate)
             {
-                points.TodayPoints = CalculateDailyPoints(points.BeforeYesterdayPoints, points.YesterdayPoints);
-                points.TotalPoints = points.TotalPoints + points.TodayPoints; // ???
                 points.BeforeYesterdayPoints = points.YesterdayPoints;
                 points.YesterdayPoints = points.TodayPoints;
+                points.TodayPoints = CalculateDailyPoints(points.BeforeYesterdayPoints, points.YesterdayPoints);
                 points.TodayDate = currentDate;
+                points.TotalPoints += points.TodayPoints; // ???
             }
         }
         await _context.SaveChangesAsync();
