@@ -1,12 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "nClNJ8YwOYkvbxBlxDlV2dEXwmhyIM3T77LWud5epe/v7dPjXsYd/73H5p02UpkD1N/gamDakNszT5azKK0hZw==",
+  "dgSpecHash": "USsMAz56FJTwmxdXrpHJCOgtJhtNlbcEAn7aHuWvlG+b3Kk9Mex8y23B22AdeU+y//5Fi8F7MvOtGypKkdl4Jw==",
   "success": true,
   "projectFilePath": "D:\\GitHubRepo\\ChaikaTechTestTask\\ChaikaTechTestTask.Core\\ChaikaTechTestTask.Core.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\petro\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\petro\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "C:\\Users\\petro\\.nuget\\packages\\fluentvalidation\\11.8.0\\fluentvalidation.11.8.0.nupkg.sha512",
+    "C:\\Users\\petro\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.8.0\\fluentvalidation.dependencyinjectionextensions.11.8.0.nupkg.sha512",
     "C:\\Users\\petro\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\petro\\.nuget\\packages\\mediatr\\12.1.1\\mediatr.12.1.1.nupkg.sha512",
     "C:\\Users\\petro\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\petro\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\petro\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.13\\microsoft.entityframeworkcore.7.0.13.nupkg.sha512",
     "C:\\Users\\petro\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.13\\microsoft.entityframeworkcore.abstractions.7.0.13.nupkg.sha512",
     "C:\\Users\\petro\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.13\\microsoft.entityframeworkcore.analyzers.7.0.13.nupkg.sha512",

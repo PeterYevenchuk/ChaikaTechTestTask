@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using FluentValidation;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace ChaikaTechTestTask.Core
 {
@@ -7,7 +8,9 @@ namespace ChaikaTechTestTask.Core
         public static IServiceCollection ConfigureServices(IServiceCollection services)
         {
             return services
-                .AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(CoreServiceConfiguration).Assembly));
+                .AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(CoreServiceConfiguration).Assembly))
+                .AddAutoMapper(typeof(CoreMappingsProfile).Assembly)
+                .AddValidatorsFromAssembly(typeof(CoreServiceConfiguration).Assembly);
         }
     }
 }

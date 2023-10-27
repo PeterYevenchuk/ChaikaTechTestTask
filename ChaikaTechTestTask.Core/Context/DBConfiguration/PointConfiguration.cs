@@ -22,6 +22,12 @@ public class PointConfiguration : IEntityTypeConfiguration<Point>
         builder.Property(p => p.TotalPoints)
                .IsRequired();
 
+        builder.Property(p => p.TodayPoints)
+               .IsRequired();
+
+        builder.Property(p => p.TodayDate)
+               .IsRequired();
+
         builder.HasOne(p => p.User)
             .WithOne(u => u.Point)
             .HasForeignKey<Point>(p => p.UserId)

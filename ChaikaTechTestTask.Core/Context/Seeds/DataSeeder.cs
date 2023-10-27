@@ -15,8 +15,8 @@ public static class DataSeeder
         );
 
         modelBuilder.Entity<Point>().HasData(
-            new Point { PointId = 1, BeforeYesterdayPoints = 100, YesterdayPoints = 50, TotalPoints = 150, UserId = 1 },
-            new Point { PointId = 2, BeforeYesterdayPoints = 200, YesterdayPoints = 100, TotalPoints = 300, UserId = 2 }
+            new Point { PointId = 1, BeforeYesterdayPoints = 100, YesterdayPoints = 50, TotalPoints = 150, TodayPoints = 0, UserId = 1, TodayDate = new DateTime(2023, 10, 26, 5, 24, 0, DateTimeKind.Utc) },
+            new Point { PointId = 2, BeforeYesterdayPoints = 200, YesterdayPoints = 100, TotalPoints = 300, TodayPoints = 0, UserId = 2, TodayDate = new DateTime(2023, 10, 25, 9,50, 0, DateTimeKind.Utc) }
         );
 
         modelBuilder.Entity<LatestTransaction>().HasData(

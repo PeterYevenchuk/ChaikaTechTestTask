@@ -10,11 +10,15 @@ public class Point
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int PointId { get; set; }
 
-    public int BeforeYesterdayPoints { get; set; }
+    public double BeforeYesterdayPoints { get; set; }
 
-    public int YesterdayPoints { get; set; }
+    public double YesterdayPoints { get; set; }
 
-    public int TotalPoints { get; set; }
+    public double TodayPoints { get; set; }
+
+    public double TotalPoints { get; set; }
+
+    public DateTime TodayDate { get; set; }
 
     public int UserId { get; set; }
 

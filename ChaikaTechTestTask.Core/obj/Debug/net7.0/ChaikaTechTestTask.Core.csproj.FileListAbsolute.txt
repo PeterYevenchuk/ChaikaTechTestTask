@@ -37,3 +37,7 @@ D:\GitHubRepo\ChaikaTechTestTask\ChaikaTechTestTask.Core\bin\Debug\net7.0\Micros
 D:\GitHubRepo\ChaikaTechTestTask\ChaikaTechTestTask.Core\bin\Debug\net7.0\Microsoft.Extensions.Hosting.Abstractions.dll
 D:\GitHubRepo\ChaikaTechTestTask\ChaikaTechTestTask.Core\bin\Debug\net7.0\MediatR.dll
 D:\GitHubRepo\ChaikaTechTestTask\ChaikaTechTestTask.Core\bin\Debug\net7.0\MediatR.Contracts.dll
+D:\GitHubRepo\ChaikaTechTestTask\ChaikaTechTestTask.Core\bin\Debug\net7.0\AutoMapper.dll
+D:\GitHubRepo\ChaikaTechTestTask\ChaikaTechTestTask.Core\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\GitHubRepo\ChaikaTechTestTask\ChaikaTechTestTask.Core\bin\Debug\net7.0\FluentValidation.dll
+D:\GitHubRepo\ChaikaTechTestTask\ChaikaTechTestTask.Core\bin\Debug\net7.0\FluentValidation.DependencyInjectionExtensions.dll
