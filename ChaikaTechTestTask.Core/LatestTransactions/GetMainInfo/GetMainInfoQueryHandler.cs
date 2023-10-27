@@ -54,9 +54,14 @@ public class GetMainInfoQueryHandler : IRequestHandler<GetMainInfoQuery, GetMain
             latestTransactionViewModel.Amount = transaction.Transaction == TransactionType.Payment
                 ? "+" + transaction.Amount.ToString("N2")
                 : transaction.Amount.ToString("N2");
-            latestTransactionViewModel.TransactionDate = transaction.TransactionDate >= lastWeekDate
-                ? transaction.TransactionDate.DayOfWeek.ToString()
-                : transaction.TransactionDate.ToString("dd.MM.yyyy");
+
+            if (transaction.IsPending)
+            {
+                latestTransactionViewModel.Description = "Pending - " + latestTransactionViewModel.Description;
+            }
+
+            latestTransactionViewModel.TransactionDate = FormatTransactionDate(transaction, lastWeekDate);
+
             return latestTransactionViewModel;
         }).ToList();
 
@@ -71,6 +76,24 @@ public class GetMainInfoQueryHandler : IRequestHandler<GetMainInfoQuery, GetMain
             Transactions = latestTransactionViewModels
         };
     }
+
+    private string FormatTransactionDate(LatestTransaction transaction, DateOnly lastWeekDate)
+    {
+        if (!string.IsNullOrEmpty(transaction.AuthorizedUser))
+        {
+            if (transaction.TransactionDate >= lastWeekDate)
+            {
+                return transaction.AuthorizedUser + " - " + transaction.TransactionDate.DayOfWeek.ToString();
+            }
+            return transaction.AuthorizedUser + " - " + transaction.TransactionDate.ToString("dd.MM.yyyy");
+        }
+        else if (transaction.TransactionDate >= lastWeekDate)
+        {
+            return transaction.TransactionDate.DayOfWeek.ToString();
+        }
+        return transaction.TransactionDate.ToString("dd.MM.yyyy");
+    }
+
 
     private string FormatDailyPoints(int points)
     {

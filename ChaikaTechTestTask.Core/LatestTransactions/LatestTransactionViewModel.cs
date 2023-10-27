@@ -4,8 +4,6 @@ public class LatestTransactionViewModel
 {
     public int TransactionId { get; set; }
 
-    public string Transaction { get; set; }
-
     public string Amount { get; set; }
 
     public string TransactionName { get; set; }
@@ -13,10 +11,6 @@ public class LatestTransactionViewModel
     public string Description { get; set; }
 
     public string TransactionDate { get; set; }
-
-    public bool IsPending { get; set; }
-
-    public string? AuthorizedUser { get; set; }
 
     public string? IconURL { get; set; }
 }

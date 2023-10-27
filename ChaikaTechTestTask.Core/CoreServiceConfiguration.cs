@@ -1,4 +1,5 @@
 ﻿using FluentValidation;
+using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace ChaikaTechTestTask.Core
@@ -10,6 +11,7 @@ namespace ChaikaTechTestTask.Core
             return services
                 .AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(CoreServiceConfiguration).Assembly))
                 .AddAutoMapper(typeof(CoreMappingsProfile).Assembly)
+                .AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>))
                 .AddValidatorsFromAssembly(typeof(CoreServiceConfiguration).Assembly);
         }
     }
