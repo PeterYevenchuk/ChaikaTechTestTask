@@ -58,44 +58,52 @@ public class DailyPointsCalculator
         int month = currentDate.Month;
         int day = currentDate.Day;
 
-        if ((month == SPRING && day == FIRS_DAY) || (month == SUMMER && day == FIRS_DAY) || 
-            (month == AUTUMN && day == FIRS_DAY) || (month == WINTER && day == FIRS_DAY))
+        if (IsFirstDayOfSeason(month, day))
         {
-            if (points.TodayDate < currentDate)
-            {
-                points.BeforeYesterdayPoints = points.YesterdayPoints;
-                points.YesterdayPoints = points.TodayPoints;
-                points.TodayPoints = POINTS_FIRST_DAY_MONTH;
-                points.TodayDate = currentDate;
-                points.TotalPoints += POINTS_FIRST_DAY_MONTH; // ???
-            }
+            UpdatePointsForNewDay(points, currentDate, POINTS_FIRST_DAY_MONTH, points.YesterdayPoints, points.TodayPoints);
         }
-        else if ((month == SPRING && day == SECOND_DAY) || (month == SUMMER && day == SECOND_DAY) ||
-            (month == AUTUMN && day == SECOND_DAY) || (month == WINTER && day == SECOND_DAY))
+        else if (IsSecondDayOfSeason(month, day))
         {
-            if (points.TodayDate < currentDate)
-            {
-                points.BeforeYesterdayPoints = points.YesterdayPoints;
-                points.YesterdayPoints = points.TodayPoints;
-                points.TodayPoints = POINTS_SECOND_DAY_MONTH;
-                points.TodayDate = currentDate;
-                points.TotalPoints += POINTS_SECOND_DAY_MONTH; // ???
-            }
+            UpdatePointsForNewDay(points, currentDate, POINTS_SECOND_DAY_MONTH, points.YesterdayPoints, points.TodayPoints);
         }
         else
         {
-            if (points.TodayDate < currentDate)
-            {
-                points.BeforeYesterdayPoints = points.YesterdayPoints;
-                points.YesterdayPoints = points.TodayPoints;
-                points.TodayPoints = CalculateDailyPoints(points.BeforeYesterdayPoints, points.YesterdayPoints);
-                points.TodayDate = currentDate;
-                points.TotalPoints += points.TodayPoints; // ???
-            }
+            /* today's points are yesterday's because they are
+            recorded as today for each day in the database,
+            so if the user enters the program for the first
+            time during this day, it will take "today's" points
+            from the database and count them as yesterday's and "yesterday's"
+            as the day before yesterday because they simply haven't moved into the database yet.*/
+
+            var calcPoints = CalculateDailyPoints(points.YesterdayPoints, points.TodayPoints);  
+            UpdatePointsForNewDay(points, currentDate, calcPoints, points.YesterdayPoints, points.TodayPoints);
         }
         await _context.SaveChangesAsync();
 
         return points.TotalPoints;
+    }
+
+    private void UpdatePointsForNewDay(Point points, DateOnly currentDate, 
+        double newPoints, double YesterdayPoints, double TodayPoints)
+    {
+        if (points.TodayDate < currentDate)
+        {
+            points.BeforeYesterdayPoints = YesterdayPoints;
+            points.YesterdayPoints = TodayPoints;
+            points.TodayPoints = newPoints;
+            points.TodayDate = currentDate;
+            points.TotalPoints += newPoints;
+        }
+    }
+
+    private bool IsFirstDayOfSeason(int month, int day)
+    {
+        return (month == SPRING || month == SUMMER || month == AUTUMN || month == WINTER) && day == FIRS_DAY;
+    }
+
+    private bool IsSecondDayOfSeason(int month, int day)
+    {
+        return (month == SPRING || month == SUMMER || month == AUTUMN || month == WINTER) && day == SECOND_DAY;
     }
 
     private double CalculateDailyPoints(double beforeYesterdayPoints, double yesterdayPoints)

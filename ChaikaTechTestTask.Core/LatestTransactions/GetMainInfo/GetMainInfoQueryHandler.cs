@@ -37,7 +37,7 @@ public class GetMainInfoQueryHandler : IRequestHandler<GetMainInfoQuery, GetMain
 
         var dailyPointsCalc = new DailyPointsCalculator(_context);
         var dailyPointsDecimal = await dailyPointsCalc.CalculateDailyPointsForUser(user.UserId);
-        var dailyPointsString = FormatDailyPoints((int)Math.Floor(dailyPointsDecimal));
+        var dailyPointsString = FormatDailyPoints((int)Math.Ceiling(dailyPointsDecimal));
 
         var transactions = await _context.LatestTransactions
             .Where(t => t.UserId == user.UserId)
