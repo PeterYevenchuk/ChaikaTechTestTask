@@ -9,13 +9,15 @@ public class DailyPointsCalculator
     private const int POINTS_FIRST_DAY_MONTH = 2;
     private const int POINTS_SECOND_DAY_MONTH = 3;
 
-    private const int SPRING = 4;
+    private const int SPRING = 3;
     private const int SUMMER = 6;
     private const int AUTUMN = 9;
     private const int WINTER = 12;
 
     private const int FIRS_DAY = 1;
     private const int SECOND_DAY = 2;
+
+    private const double PERCENTAGE_DIVISION_YESTERDAY = 0.6;
     #endregion
 
     private readonly ChaikaTechDbContext _context;
@@ -108,6 +110,6 @@ public class DailyPointsCalculator
 
     private double CalculateDailyPoints(double beforeYesterdayPoints, double yesterdayPoints)
     {
-        return beforeYesterdayPoints + (yesterdayPoints * 0.6);
+        return beforeYesterdayPoints + (yesterdayPoints * PERCENTAGE_DIVISION_YESTERDAY);
     }
 }

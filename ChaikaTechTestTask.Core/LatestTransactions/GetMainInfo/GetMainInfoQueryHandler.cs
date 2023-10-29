@@ -9,6 +9,7 @@ namespace ChaikaTechTestTask.Core.LatestTransactions.GetMainInfo;
 public class GetMainInfoQueryHandler : IRequestHandler<GetMainInfoQuery, GetMainInfo>
 {
     private const int AVAILABLE_BALANCE = 1500;
+    private const int ONE_THOUSAND_K = 1000;
 
     private readonly ChaikaTechDbContext _context;
     private readonly IMapper _mapper;
@@ -97,6 +98,6 @@ public class GetMainInfoQueryHandler : IRequestHandler<GetMainInfoQuery, GetMain
 
     private string FormatDailyPoints(int points)
     {
-        return points >= 1000 ? (points / 1000) + "k" : points.ToString();
+        return points >= ONE_THOUSAND_K ? (points / ONE_THOUSAND_K) + "k" : points.ToString();
     }
 }
